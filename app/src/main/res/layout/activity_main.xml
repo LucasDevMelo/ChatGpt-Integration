@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#4958dc"
+    tools:context="com.loopssoftwares.chatgpt_integration.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:src="@drawable/top_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvTitleHomeScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Digite seu input aqui"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:text="Digite sua pergunta aqui"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -23,14 +36,16 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_textInputUser"
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Input"/>
+            android:hint=""/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -41,17 +56,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#7a8afa"
         android:text="Pesquisar"/>
 
-    <TextView
-        android:id="@+id/tv_response_chat_gpt"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Resposta do ChatGpt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/btnSearch"/>
+        app:layout_constraintTop_toBottomOf="@id/btnSearch"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_response_chat_gpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Olá, o que você deseja saber?                                                                                                                                                                                                                                                                         . "
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/btnSearch"/>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
