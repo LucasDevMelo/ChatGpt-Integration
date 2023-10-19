@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlin.time.Duration.Companion.seconds
 
 class ApiBuilder {
-    private val apikey = "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"
+    private val apikey = "YOUR API HERE"
     private val config = OpenAIConfig(token = apikey, timeout = Timeout(socket = 60.seconds))
     private val openAiApi = OpenAI(config)
 
